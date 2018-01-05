@@ -1,0 +1,9 @@
+---
+applications:
+- name: cf-test-app-ruby
+  random-route: true
+  memory: 256M
+  instances: 1
+  host: cf-test-app-ruby
+  buildpack: ruby_buildpack
+  command: bundle exec rails s -p $PORT
